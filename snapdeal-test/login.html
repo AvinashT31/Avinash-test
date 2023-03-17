@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>login</title>
+</head>
+
+<body>
+    <div id="login()">
+        <h1>Login on Snapdeal</h1>
+        <form onsubmit="login(event)">
+            <label>Enter your Email</label>
+            <br>
+            <input id="userEmail" type="Email" placeholder="Enter your Email">
+            <br>
+            <label>Enter your Password</label>
+            <br>
+            <input id="userPassword" type="Password" placeholder="Enter your Password">
+            <br>
+            <input type="submit" value="login">
+        </form>
+    </div>
+
+    <script src="server.js"></script>
+    <script>
+        DataFromLs = JSON.parse(localStorage.setItem("current-user"))
+        if(DataFromLs){
+            alert("already logged")
+            window.location.href = "./index,html"
+        }
+    </script>
+
+</body>
+
+</html>

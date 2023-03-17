@@ -39,23 +39,23 @@
 // count = [];
 
 // for (var i = 5768; i < 78656; i++) {
-
+ 
 
 // }
 
 // Q.1 find the addition of number which match the given target from the given array. if found then print the number if not then "not found"
 
-var array = [34, 45, 65, 23, 5, 676, 32, 34]
+// var array = [34, 45, 65, 23, 5, 676, 32, 34]
 
-var target = 66;
+// var target = 66;
 
-for (var i = 0; i < array.length; i++) {
-    // console.log(array);
-    for (var j=i; j < array.length; j++) {
-       if(array[i] + array[j] == target){
-        console.log(array[i], array[j])
-       }
-    }
+// for (var i = 0; i < array.length; i++) {
+//     // console.log(array);
+//     for (var j=i; j < array.length; j++) {
+//        if(array[i] + array[j] == target){
+//         console.log(array[i], array[j])
+//        }
+//     }
 
-}
+// }
 

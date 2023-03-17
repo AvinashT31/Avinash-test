@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart page</title>
+</head>
+
+<body>
+    <div id="CartProduct">
+
+    </div>
+
+    <button onclick="Buyproduct()">Buy Product</button>
+
+    <script>
+        window.onload = function () {
+            var cuser = JSON.parse(localStorage.getItem("current-user"));
+            if (cuser) {
+                var DataFromHtml = document.getElementById("CartProduct");
+                console.log(DataFromHtml, "DataFromHtml");
+
+                var DataFromLS = JSON.parse(localStorage.getItem("userDataList"));
+                console.log(DataFromLS, "DataFromLS");
+
+                var cuser = JSON.parse(localStorage.getItem(("current-user")));
+                console.log(cuser, "cuser");
+
+                var showproductcart = [];
+                var Alluser;
+
+                flag = false;
+
+                for (var i = 0; i < DataFromLS.length; i++) {
+                    if (DataFromLS[i].Email === cuser["current-user-email"]) {
+                        Alluser = DataFromLS[i].Cartproduct;
+                        flag = true;
+                    }
+                    console.log(Alluser, "Alluser")
+
+                    if (flag) {
+                        for (var i = 0; i < Alluser.length; i++) {
+                            showproductcart += `<div><img src="${Alluser[i].Image}"></img><p>${Alluser[i].Name}</p><p>${Alluser[i].Price}</p></div>`
+                        }
+                        DataFromHtml.innerHTML = showproductcart;
+                        // console.log(showproductcart, "showproductcart");
+                    }
+                }
+            }
+            else {
+
+                alert("login first");
+            }
+        }
+
+
+        function Buyproduct() {
+            // alert("working");
+
+            var DataFromLS = JSON.parse(localStorage.getItem("userDataList"));
+            console.log(DataFromLS, "DataFromLS");
+
+            var cuser = JSON.parse(localStorage.getItem(("current-user")));
+            console.log(cuser, "cuser");
+
+            User = [];
+
+            for (var i = 0; DataFromLS.length; i++) {
+                if (DataFromLS[i].Email === cuser["current-user-email"] && DataFromLS[i].Cartproduct) {
+                    DataFromLS[i].Cartproduct = [];
+                    User.push(DataFromLS[i]);
+                }
+                else {
+                    user.push(DataFromLS[i]);
+                }
+                localStorage.setItem("userDataList", JSON.stringify(User));
+                window.location.reload();
+                alert("Product delivery soon");
+
+            }
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6d819e768f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Snapdeal</title>
+</head>
+<body>
+    <div id="full-page">
+        <div id="navbar">
+            <div id="logout">
+      
+            </div>
+            <button onclick="logout()">logout</button>
+
+        </div>
+    </div>
+
+    <script>
+        // function check(){
+        //     var DataFromLS = JSON.parse(localStorage.getItem("current-user"))
+
+        //     divFromHTML = document.getElementById("logout");
+        //     console.log(divFromHTML, "divFromHTML");
+             
+        //     divForLogout += `<div><button onclick = "logout()">logout</button></div>`
+
+        //     divFromHTML.innerHTML = divForLogout;
+        // }
+        // check()
+
+        function logout(){
+            JSON.parse(localStorage.getItem("current-user"));
+            localStorage.removeItem("current-user");
+            alert("logout successfully");
+        }
+    </script>
+</body>
+</html>
