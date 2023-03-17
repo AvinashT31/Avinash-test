@@ -13,7 +13,7 @@ window.onload = function (event) {
 
     for (var i = 0; i < DataFromLS.length; i++) {
 
-        showproduct = `<div><img src="${DataFromLS[i].Image}"></img><p>${DataFromLS[i].Name}</p><p>${DataFromLS[i].Price}</p><button onclick = 'AddToCart(${JSON.stringify(DataFromLS[i])})' >Add to Cart</button></div>`
+        showproduct += `<div><img src="${DataFromLS[i].Image}"></img><p>${DataFromLS[i].Name}</p><p>${DataFromLS[i].Price}</p><button onclick = 'AddToCart(${JSON.stringify(DataFromLS[i])})' >Add to Cart</button></div>`
 
     }
 
@@ -47,9 +47,9 @@ function AddToCart(pro) {
                 localStorage.setItem("userDataList", JSON.stringify(UsersForAll));
                 alert("product added to the cart successfully")
             }
-               else{
+            else {
                 UsersForAll.push(DataFromLS[i]);
-               }  
+            }
         }
         // console.log(DataFromLS, "DataFromLS");
     }

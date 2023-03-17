@@ -31,6 +31,20 @@
                 var showproductcart = [];
                 var Alluser;
 
+
+                // flag = false;
+
+                // for(var i=0; i < DataFromLS.length; i++){
+                //     if(DataFromLS[i].Email === cuser["current-user-email"] && DataFromLS[i].Cartproduct){
+                //        flag = true;
+                //     }
+                //     if(flag){
+                //        showproductcart += `<div><img src="${DataFromLS[i].Cartproduct[i].Image}"></img><p>${DataFromLS[i].Cartproduct[i].Name}</p><p>${DataFromLS[i].Cartproduct[i].Price}</p></div>`
+                //     }
+                //     console.log(showproductcart, "showproductcart")
+                //     // DataFromHtml.innerHTML = showproductcart;
+                // }
+
                 flag = false;
 
                 for (var i = 0; i < DataFromLS.length; i++) {
@@ -47,7 +61,7 @@
                         DataFromHtml.innerHTML = showproductcart;
                         // console.log(showproductcart, "showproductcart");
                     }
-                }
+               }
             }
             else {
 
