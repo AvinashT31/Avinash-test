@@ -44,6 +44,7 @@ function register(event) {
         document.getElementById("userPassword").value = "";
         document.getElementById("userConfirmPassword").value = "";
        alert("registration done");
+       window.location.href ="/login.html"
     }
 
 }
